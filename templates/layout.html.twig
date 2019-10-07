@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% include 'navbar.html.twig' %}
+
+    {% block section %}{% endblock %}
+
+    <footer class="py-2 mt-3" style="background: black; color: white;">
+	<!-- Du text
+	<hr class="border-0" style="border-top: 1px solid rgb(255, 255, 255) !important; width: 100%;"> -->
+	<div class="container my-3">
+		<div class="row">
+			<div class="col-md-6 text-center">Copyright © 2019 ONEM</div>
+			<div class="col-md-6 text-center"><h3 class="h6 d-inline">Réseaux sociaux : </h3><i class="fas fa-facebook  my-1"></i> <i class="fas fa-envelope my-1"></i></div>
+		</div>
+	</div>
+	</footer>
+{% endblock %}

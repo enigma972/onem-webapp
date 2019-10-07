@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} Créer un compte{% endblock %}
+
+{% block section %}
+    <div class="container mt-4">
+    	<div class="row mt-4">
+    		<div class="col">
+    			<h4 class="h4 d-inline">{{ offre.titre }} </h4>  <h6 class="h6 d-inline">Date d'expiration: {{ offre.dateExpiration | date('d/m/Y') }}</h6>
+    			<h6 class="h6">Poste : {{ offre.poste }}</h6>
+    			<p> {{ '' }} </p>
+    		</div>
+    	</div>
+    </div>
+{% endblock %}

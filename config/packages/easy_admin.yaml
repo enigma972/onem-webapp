@@ -1,0 +1,30 @@
+easy_admin:
+    site_name:  "ONEM | Esapce d'administration"
+    design:
+      menu:
+        - { label:  'Acceuil du site', url: '/', rel: 'index' }
+        - { entity: 'User', icon: 'user' }
+        - { entity: 'Enterprise', icon: 'landmark' }
+        - { entity: 'Offre', icon: 'wpforms' }
+    user:
+      #display_name: true
+      name_property_path: 'nom'
+    entities:
+#        # List the entity class name you want to manage
+#        - App\Entity\Product
+#        - App\Entity\Category
+      User:
+        class:  App\Entity\User
+        label:  'Admin'
+        list:
+          title:  "La liste des administrateurs"
+      Enterprise:
+        class:  App\Entity\Enterprise
+        label:  'Entreprises'
+        list:
+          title:  "La liste d'entreprises enregistrées"
+      Offre:
+        class:  App\Entity\Offre
+        label:  "Offres d'emploies"
+        list:
+          title:  "La liste d'offres publiées"

@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} Acceuil{% endblock %}
+
+{% block section %}
+	<style>
+		.banner	{
+			height: 100vh;
+			background: linear-gradient(-225deg, rgba(30, 30, 30, 0.6) 30%, rgba(46, 46, 46, 0.5) 80%), url("cdn/images/intro.jpg");
+			background-size: cover;
+			color: white;
+			text-align: center;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.banner h1 {
+			font-size: 50px;
+			font-weight: bolder;
+		}
+
+		.banner p {
+			font-size: 30px;
+			font-weight: lighter;
+		}
+	</style>
+	<div class="banner">
+		<div class="banner-content">
+			<h3>Bienvenu sur le site de l'Office National de l'EMploi</h3>
+			<p>Trouvez facilement des offres d'emploi grâce à notre plateforme en ligne</p>
+		</div>
+	</div>
+
+    <div class="container mt-5 mb-3">
+    	L’Office Nationale d’Emploi a pour mission principale de promouvoir l’emploi et de réaliser en collaboration avec les organismes publics ou privés intéressés la meilleure organisation du marché de l’emploi en RDC. De par la mission qui lui est assignée. L’ONEM est un acteur incontournable dans le domaine de l’emploi et des ressources humaines en RDC. Il rend ses services aux demandeurs d’emplois en RDC.
+    </div>
+
+    <div class="my-3 text-center">
+    	<a href="{{ path('offres') }}" class="btn btn-outline-primary">Voir tout les offres d'emploi</a>
+    </div>
+{% endblock %}

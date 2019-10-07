@@ -1,0 +1,5 @@
+.not-caret::after {
+	display: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZmx1eC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxhQUFhO0FBQ2QsQyIsImZpbGUiOiJmbHV4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ub3QtY2FyZXQ6OmFmdGVyIHtcclxuXHRkaXNwbGF5OiBub25lO1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ==*/

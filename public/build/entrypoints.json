@@ -1,0 +1,53 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~register.js",
+        "/build/app~register.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/app.css"
+      ]
+    },
+    "register": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~register.js",
+        "/build/app~register.js",
+        "/build/register.js"
+      ],
+      "css": [
+        "/build/register.css"
+      ]
+    },
+    "login": {
+      "js": [
+        "/build/runtime.js",
+        "/build/login.js"
+      ],
+      "css": [
+        "/build/login.css"
+      ]
+    },
+    "complete_player_data": {
+      "js": [
+        "/build/runtime.js",
+        "/build/complete_player_data.js"
+      ],
+      "css": [
+        "/build/complete_player_data.css"
+      ]
+    },
+    "flux": {
+      "js": [
+        "/build/runtime.js",
+        "/build/flux.js"
+      ],
+      "css": [
+        "/build/flux.css"
+      ]
+    }
+  }
+}
