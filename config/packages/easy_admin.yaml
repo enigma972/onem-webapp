@@ -6,6 +6,7 @@ easy_admin:
         - { entity: 'User', icon: 'user' }
         - { entity: 'Enterprise', icon: 'landmark' }
         - { entity: 'Offre', icon: 'wpforms' }
+        - { entity: 'Comment', icon: 'comment' }
     user:
       #display_name: true
       name_property_path: 'nom'
@@ -28,3 +29,8 @@ easy_admin:
         label:  "Offres d'emploies"
         list:
           title:  "La liste d'offres publiées"
+      Comment:
+        class:  App\Entity\Comment
+        label:  "Commentaires"
+        list:
+          title:  "La liste de commentaires"

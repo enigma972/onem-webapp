@@ -17,7 +17,8 @@
                                 {{ offre.titre }} <span class="h6 float-right">le {{ offre.datePublication | date('d/m/Y') }}</span>
                             </div>
                             <div class="card-body">
-                                {{ offre.summary }} ... <a href="{{ path('offre', {'id': offre.id}) }}" class="stretched-link text-decoration-none">Voir en détail.</a>
+                                <p>Lieu d'affectation: {{  offre.lieuaffectation }} </p>
+    			                <p>Type de contrat: {{  offre.typecontrat }} </p> ... <a href="{{ path('offre', {'id': offre.id}) }}" class="stretched-link text-decoration-none">Voir en détail.</a>
                             </div>
                             <div class="card-footer">
                                 Date d'expiration: {{ offre.dateExpiration | date('d/m/Y') }}

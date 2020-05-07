@@ -2,10 +2,13 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
-use App\Repository\OffreRepository;
 use App\Entity\Offre;
+use App\Entity\Comment;
+use App\Form\CommentType;
+use App\Repository\OffreRepository;
+use App\Repository\CommentRepository;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
@@ -35,10 +38,16 @@ class HomeController extends AbstractController
     /**
      * @Route("/offres/{id}/voir", name="offre")
      */
-    public function offre(Offre $offre)
+    public function offre(Offre $offre, CommentRepository $commentRepos)
     {   
+        $comments = $commentRepos->findAll();
+        $form = $this->createForm(CommentType::class, new Comment());
+
         return $this->render('home/offre.html.twig', [
-            'offre'        =>  $offre
+            'offre'   => $offre,
+            'comments' => $comments,
+
+            'form' => $form->createView(),
         ]);
     }
 }

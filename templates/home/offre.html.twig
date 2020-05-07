@@ -5,11 +5,32 @@
 {% block section %}
     <div class="container mt-4">
     	<div class="row mt-4">
-    		<div class="col">
+    		<div class="col-8 mx-auto">
     			<h4 class="h4 d-inline">{{ offre.titre }} </h4>  <h6 class="h6 d-inline">Date d'expiration: {{ offre.dateExpiration | date('d/m/Y') }}</h6>
     			<h6 class="h6">Poste : {{ offre.poste }}</h6>
-    			<p> {{ '' }} </p>
+    			<p>Lieu d'affectation: {{  offre.lieuaffectation }} </p>
+    			<p>Type de contrat: {{  offre.typecontrat }} </p>
+    			<p>Experience demandée: {{  offre.experience }} </p>
+    			<p>Formation: {{  offre.formation }} </p>
     		</div>
+			
+			<div class="col-8 mx-auto mt-5">
+			<hr/>
+    			<h6 class="h6">Les commentaires</h6>
+    			{% for comment in comments %}
+					<div>
+						<h6>{{ comment.auteur }} <span style="font-size: small;"> {{ comment.date | date('d/m/y')}} </span></h6>
+						<p> {{ comment.contenu }} </p>
+					</div>
+    			{% else %}
+						<div class="mb-2">Cet offre n'a pas encore de commentaires</div>
+				{% endfor %}
+				<div class="bg-white shadow-sm p-3 mt-3">
+					{% include "comment/_form.html.twig" %}
+				</div>
+    		</div>
+
+
     	</div>
     </div>
 {% endblock %}
